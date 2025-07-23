@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D-ning | Data Cleaning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <span class="site-title">D-ning</span>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="tail-bar">
+            <div>
+                <span>Developer: Megh</span> |
+                <a href="https://www.linkedin.com/in/megh-patel-b4a868282/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/megh193" target="_blank">GitHub</a> |
+                <a href="mailto:meghp193@gmail.com">meghp193@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

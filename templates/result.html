@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard">
+    <h1>Processed Files</h1>
+    <ul class="file-list">
+        {% for file in files %}
+        <li>
+            {{ file.original }} &rarr;
+            <a href="{{ file.download }}">Download Cleaned File</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('dashboard') }}" class="back-btn">Back to Dashboard</a>
+</div>
+{% endblock %}

@@ -1,0 +1,128 @@
+body {
+    background: #181a1b;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header-bar {
+    background: #23272b;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+.site-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #00bcd4;
+    letter-spacing: 2px;
+}
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 0;
+}
+.dashboard {
+    background: #222;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #000a;
+    min-width: 350px;
+    max-width: 500px;
+    width: 100%;
+}
+h1 {
+    color: #00bcd4;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 1.2rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #b0bec5;
+}
+input[type="file"], select, input[type="checkbox"] {
+    width: 100%;
+    padding: 0.5rem;
+    background: #181a1b;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+button {
+    background: #00bcd4;
+    color: #181a1b;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+}
+button:hover {
+    background: #0097a7;
+}
+.file-list {
+    list-style: none;
+    padding: 0;
+}
+.file-list li {
+    margin-bottom: 1rem;
+    background: #23272b;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+}
+.back-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+.back-btn:hover {
+    text-decoration: underline;
+}
+.tail-bar {
+    background: #23272b;
+    color: #b0bec5;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    border-top: 1px solid #333;
+    font-size: 1rem;
+}
+.tail-bar a {
+    color: #00bcd4;
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+.tail-bar a:hover {
+    text-decoration: underline;
+}
+.flashes {
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+}
+.flashes li {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+.flashes .error {
+    background: #b71c1c;
+    color: #fff;
+}

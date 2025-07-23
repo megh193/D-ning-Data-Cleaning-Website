@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard">
+    <h1>Data Cleaning Dashboard</h1>
+    <form id="uploadForm" action="{{ url_for('process') }}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Select files (CSV/Excel):</label>
+            <input type="file" name="files" multiple required accept=".csv,.xls,.xlsx">
+        </div>
+        <div class="form-group">
+            <label>File Type:</label>
+            <select name="filetype" required>
+                <option value="csv">CSV</option>
+                <option value="excel">Excel</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Null Value Handling:</label>
+            <select name="null_action" required>
+                <option value="mean">Replace with Mean</option>
+                <option value="median">Replace with Median</option>
+                <option value="drop">Drop Rows</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Primary Key:</label>
+            <select name="pk_action" required>
+                <option value="none">None</option>
+                <option value="assign">Assign Proper Numbering</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="remove_duplicates">
+                Remove Duplicates
+            </label>
+        </div>
+        <button type="submit">Clean Data</button>
+    </form>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</div>
+{% endblock %}
